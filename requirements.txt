@@ -1,0 +1,9 @@
+
+Flask
+darkskylib
+itsdangerous
+python-yr
+RPi.GPIO
+Adafruit-DHT
+uWSGI
+pika

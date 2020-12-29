@@ -1,0 +1,37 @@
+/* Semantic CSS applies Blueprint CSS positioning to your custom IDs.
+   File saved as ISO-8859-1 encoding. 
+
+   number of columns:24
+   column width:34
+   gutter width:8
+   total width:1000
+   row height:18 px 
+*/
+#container {
+    /* This is a Blueprint Container. Spans 24 columns. */
+    width:1000px;
+    margin:0 auto;
+    height:594px;
+    overflow:hidden;
+/*    background:url(src/grid.png); */
+}
+/* Begin descendants of container */
+
+#BOXID {
+    /* Spans 6 columns. */
+    float:left;
+    width:244px;
+    margin-right:0;
+    height:144px;
+    overflow:hidden;
+}
+
+#BOXLOG {
+    /* Spans 18 columns. */
+    float: left;
+    width: 748px;
+    margin-right: 5px;
+    height: 144px;
+    overflow: hidden;
+}
+/* End descendants of container */

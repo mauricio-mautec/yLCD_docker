@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <!-- File saved as ISO-8859-1 encoding. -->
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="google" content="notranslate">
+    <title>RBP INFO WEATHER STATION</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS Framework -->
+    <link rel="stylesheet" href="/static/mercado/css/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="/static/mercado/css/print.css" type="text/css" media="print">
+
+    <link href="http://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet" type="text/css">
+    <!--[if lt IE 8]><link rel="stylesheet" href="/static/mercado/css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+
+    <link rel="stylesheet" href="/static/mercado/css/normalizeLog.css">
+    <link rel="stylesheet" href="/static/mercado/css/semanticLog.css" type="text/css" media="screen, projection">
+    <!-- Number of columns: 24
+         Column width: 34
+         Gutter width: 8
+         Total width: 1000
+         Row height: 18 px  -->
+
+  <script>
+	function changePage() {
+		var params = new URLSearchParams(location.search);
+		params.set('tipo', 'log');
+		window.location.search = params.toString();
+	}
+  	<!-- 
+    window.onload = function() { setTimeout (changePage, 5000); } 
+    -->
+  </script>
+  </head>
+  <body>
+    <div id="container">
+        <div class="span-24" style="height:164px;">
+            {% for log in logs %}
+            <div class="span-6">
+                 <div id="BOXID">
+                    <h4 class='yellow'>{{log[0]}}</br>{{log[1]}} </h4>
+                  </div><!--  end BOXID -->
+            </div>
+            <div class="span-18 last">
+                 <div id="BOXLOG">
+                    <h4 class='orange'>{{log[2]}}</br>{{log[3]}}</h4>
+                 </div>   
+            </div>
+            {% endfor %}
+        </div>     
+    </div><!--  end container -->
+  </body>
+</html>

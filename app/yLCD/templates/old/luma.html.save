@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+  <head>
+    <!-- File saved as ISO-8859-1 encoding. -->
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta http-equiv="refresh" content="10">
+    <title>HTML Layout </title>
+
+    <!-- CSS Framework -->
+    <link rel="stylesheet" href="/static/luma/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="/static/luma/print.css" type="text/css" media="print">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/luma/semantic.css" type="text/css" media="screen, projection">
+
+    <!--[if lt IE 8]><link rel="stylesheet" href="/static/ie.css" type="text/css" media="screen, projection"><![endif]-->
+
+
+    <!-- Number of columns: 24
+         Column width: 34
+         Gutter width: 8
+         Total width: 1000
+         Row height: 18 px  -->
+
+    <!-- To remove div outlines, remove line below. -->
+    <style>div {outline:1px solid #000000;}</style>
+
+  </head>
+  <body>
+
+    <div id="container">
+    
+        <div class="span-24" style="height:360px;">
+        
+            <div id="TEMPERATURA">
+		    <h1>{{"{0:0.1f}".format(temp)}}</h1>
+            </div><!--  end TEMPERATURA -->
+            
+            <div id="HUMIDADE">
+		    <h1>{{"{0:0.1f}".format(hum)}}</h1>
+            </div><!--  end HUMIDADE -->
+            
+            <div id="HORARIO">
+		    <h2>{{time}}</h2>
+            </div><!--  end HORARIO -->
+            
+        </div><!--  end span-24 -->
+        
+        <div id="LETTERBOX">
+		<h2>LETTERBOX</h2>
+        </div><!--  end LETTERBOX -->
+        
+        <div id="RECADO">
+		<h2>LETTERBOX</h2>
+        </div><!--  end RECADO -->
+        
+    </div><!--  end container -->
+    
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="30">
+  <title>Weather Display</title>
+  <link rel="stylesheet" href="/static/main/css/bulma.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+ </head>
+
+ <body>
+ <section class="hero is-light is-bold">
+  <div class="container">
+       <h1 class="title"> Weather Display Bulma.io</h1>
+       <p class="subtitle">Collect Info from database using <strong>Python, Flask, UWSGI, NGINX e Bulma CSS</strong>!</p>
+       <h2 class='is-size-2'>@Home {{"{0:0.1f}".format(TEMPLAB)}}&#176C {{"{0:0.1f}".format(HUMLAB)}}%</h2>
+       <h3 class='is-size-4'>{{TEMPO}}</h3>
+
+       <nav class="breadcrumb" aria-label="Weather Info">
+        <ul>
+            <li class="is-active"><a href="#" aria-current="page">{{IATA}}<a/></li>
+            <li><a href="/weather">Weather App</a></li>
+            <li><a href="/weatherDB">WeatherDB App</a></li>
+        </ul>
+       </nav>
+
+       <hr>
+       <div class="columns">
+           <div class="column">
+               <div class="card">
+                  <div class="card-content has-background-light">
+                     <div class="media">
+                        <div class="media-left">
+                           <figure class="image is-128x128">
+                             <img src="/static/main/images/feira_128x96.png" alt="Santa Maria">
+                           </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">Santa Maria</p>
+                            <p class="subtitle is-6 has-text-danger has-text-weight-bold">AVEIRO - PORTUGAL</p>
+                            {% if IATA == 'SMF' %}
+                            <p class="title is-4">{{"{0:0.1f}".format(TEMP)}}&#176C {{"{0:0.1f}".format(HUM)}}%</p>
+                            {% endif %}
+                        </div>
+                     </div>   
+                     <div class="content has-text-gray-dark has-text-weight-bold">
+Santa Maria da Feira &eacute; uma cidade portuguesa com aproximadamente 139.313 habitantes no seu per&iacute;metro, pertence &agrave; &Aacute;rea Metropolitana do Porto, ao distrito de Aveiro, &agrave; região Norte  &agrave; antiga prov&iacute;ncia do Douo Litora
+                     </div>
+                  </div>
+
+                  <footer class="card-footer">
+                    <a href="/?cidade=SMF" class="card-footer-item">Visualizar</a>
+                  </footer>
+               </div>
+           </div>
+
+           <div class="column">
+               <div class="card">
+                  <div class="card-content has-background-light">
+                     <div class="media">
+                        <div class="media-left">
+                           <figure class="image is-128x128">
+                             <img src="/static/main/images/goiania_128x72.png" alt="Goi&acirc;nia">
+                           </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">Goi&acirc;nia</p>
+                            <p class="subtitle is-6 has-text-primary has-text-weight-bold">GOI&Aacute;S - BRASIL</p>
+                            {% if IATA == 'GYN' %}
+                            <p class="title is-4">{{"{0:0.1f}".format(TEMP)}}&#176C &nbsp;{{"{0:0.1f}".format(HUM)}}%</p>
+                            {% endif %}
+                        </div>
+
+                     </div>   
+                     <div class="content has-text-gray-dark has-text-weight-bold">
+Goi&acirc;nia &eacute; um munic&iacute;pio brasileiro, capital do estado de Goi&aacute;s. Dista 209 km de Bras&iacute;lia, a capital nacional.
+Com uma &aacute;rea de aproximadamente 739km<sup>2</sup>, possui uma geografia cont&iacute;nua, com poucos morros e baixadas.
+                     </div>
+                  </div>
+                  <footer class="card-footer">
+                    <a href="/?cidade=GYN" class="card-footer-item">Visualizar</a>
+                  </footer>
+               </div>
+           </div>
+
+           <div class="column">
+               <div class="card">
+                  <div class="card-content has-background-light">
+                     <div class="media">
+                        <div class="media-left">
+                           <figure class="image is-128x128">
+                             <img src="/static/main/images/caldas_128x96.png" alt="Caldas Novas">
+                           </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">Caldas Novas</p>
+                            <p class="subtitle is-6 has-text-primary has-text-weight-bold">GOI&Aacute;S - BRASIL</p>
+                            {% if IATA == 'CLV' %}
+                            <p class="title is-4">{{"{0:0.1f}".format(TEMP)}}&#176C {{"{0:0.1f}".format(HUM)}}%</p>
+                            {% endif %}
+                        </div>
+
+                     </div>   
+                     <div class="content has-text-gray-dark has-text-weight-bold">
+Caldas Novas &eacute; uma cidade no centro do Brasil conhecida pelos seus banhos termais. As suas piscinas naturais e artificiais v&atilde;o de parques tem&aacute;ticos a spas. Situada a cerca de 186Km da capital possu&iacute; um movimentado aeroporto.
+                     </div>
+                  </div>
+                  <footer class="card-footer">
+                    <a href="/?cidade=CLV" class="card-footer-item">Visualizar</a>
+                  </footer>
+               </div>
+           </div>
+       </div>
+
+  </div>
+ </section>
+ <hr>
+ <section class="section is-light is-bold">
+   <div class="container"> 
+       
+       <div class="columns is-mobile">
+         <div class="column has-background-light">
+           <p><strong>{{IATA}} - DarkSky</strong></p>
+           <div class="columns">
+              <div class="column">
+                   {% for dado in infoDSK %}
+                      <p>{{dado[1]}}</p>
+                   {% endfor %}   
+              </div>
+              <div class="column is-one-third">
+                   {% for dado in infoDSK %}
+                      {% if dado[3] is number %}
+                      <p class="bd-notification is-info has-text-right">{{"{0:0.2f}".format(dado[3])}}</p>
+                      {% else %}
+                      <p class="bd-notification is-info has-text-right">{{dado[3]}}</p>
+                      {% endif %}
+                   {% endfor %}   
+              </div>
+              <div class="column is-one-quarter">
+                   {% for dado in infoDSK %}
+                      <p class="bd-notification is-info has-text-left">{{dado[2]}}</p>
+                   {% endfor %}   
+              </div>
+           </div>
+         </div>
+
+         <div class="column has-background-light">
+           <p><strong>{{IATA}} - Open Weather Map</strong></p>
+           <div class="columns">
+              <div class="column">
+                   {% for dado in infoOWM %}
+                      <p class="bd-notification">{{dado[1]}}</p>
+                   {% endfor %}   
+              </div>
+              <div class="column is-one-third">
+                   {% for dado in infoOWM %}
+                      {% if dado[3] is number %}
+                      <p class="bd-notification has-text-right">{{"{0:0.2f}".format(dado[3])}}</p>
+                      {% else %}
+                      <p class="bd-notification has-text-right">{{dado[3]}}</p>
+                      {% endif %}
+                   {% endfor %}   
+              </div>
+              <div class="column is-one-quarter">
+                   {% for dado in infoOWM %}
+                      <p class="bd-notification is-info has-text-left">{{dado[2]}}</p>
+                   {% endfor %}   
+              </div>
+           </div>
+         </div>
+
+         <div class="column has-background-light">
+           <p><strong>{{IATA}} - YR</strong></p>
+           <div class="columns">
+              <div class="column">
+                   {% for dado in infoYR %}
+                      <p class="bd-notification is-info">{{dado[1]}}</p>
+                   {% endfor %}   
+              </div>
+              <div class="column is-one-third">
+                   {% for dado in infoYR %}
+                      {% if dado[3] is number %}
+                      <p class="bd-notification is-info has-text-right">{{"{0:0.2f}".format(dado[3])}}</p>
+                      {% else %}
+                      <p class="bd-notification is-info has-text-right">{{dado[3]}}</p>
+                      {% endif %}
+                   {% endfor %}   
+              </div>
+              <div class="column is-one-quarter">
+                   {% for dado in infoYR %}
+                      <p class="bd-notification is-info has-text-left">{{dado[2]}}</p>
+                   {% endfor %}   
+              </div>
+           </div>
+         </div>
+       </div>
+       
+   </div>
+ </section>
+ </body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <title>Lab Conditions by RPi</title>
+    <meta name="description" content="Lab conditions - RPi">
+    <meta name="author"      content="Peter Dalmaris">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- FONT -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+  </head>
+  <body>
+    <!-- START DIV CONTAINER -->
+    <div class="container">
+      <!-- Datetimepicker form start -->
+      <div class="row">
+        <form id="dateTimeRange" action="/labTempDB" method="GET"> 
+            <div class="three columns">
+              <label for="iniDate">From date</label>
+              <input class="u-full-width" id="datetimepicker1" type="text" value="{{iniDate}}" name="iniDate">
+            </div>        
+            <div class="three columns">
+              <label for="endDate">To date</label>           
+              <input class="u-full-width" id="datetimepicker2" type="text" value="{{endDate}}" name="endDate">
+            </div>           
+            <div class="two columns">           
+              <input type="hidden" class="timezone" name="timezone" />    <!-- Timezone info goes here -->
+              <input class="button-primary" type="submit" value="Submit" style="position:relative; top: 28px" id="submit_button" />
+            </div>        
+        </form> 
+      </div>
+      <!-- Datetimepicker form end -->
+
+      <!-- Range Select Start -->
+      <div class="row">
+          <div class="eleven columns">
+            <form id="range_select" action = "/labTempDB" method="GET">        
+              <input type="hidden" class="timezone" name="timezone" />    <!-- Timezone info goes here -->
+              <div class="one column">
+                <input type="radio" name="rangeHour" value="3" id="radio_3" {{ck3}} /><label for="radio_3" class="yellow">3hrs</label>
+              </div>
+              <div class="one column">
+                <input type="radio" name="rangeHour" value="6" id="radio_6" {{ck6}} /><label for="radio_6" class="yellow">6hrs</label>
+              </div>
+              <div class="one column">
+                <input type="radio" name="rangeHour" value="12" id="radio_12" {{ck12}}/><label for="radio_12" class="yellow">12hrs</label>
+              </div>
+              <div class="one column">
+                <input type="radio" name="rangeHour" value="24" id="radio_24" {{ck24}}/><label for="radio_24" class="yellow">24hrs</label>
+              </div>
+            </form>          
+          </div>
+      </div>
+      <!-- DATA DISPLAY ROW START --> 
+      <div class="row">
+          <!-- Google Charts Code start -->
+          <div class="two-thirds column" style="margin-top: 5%">
+            <div class="row">                  
+              <div class="row">
+                <div class="three columns">
+                  <div id="chart_temps"></div>
+                  <div id="chart_humid"></div>
+                </div>
+              </div>
+            </div>     
+          </div>
+          <!-- Google Charts Code end -->
+      </div> 
+      <!-- DATA DISPLAY END -->
+    </div>
+    <!-- END DIV CLASS CONTAINER -->
+
+  </body>
+  <script src="//code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+   <!-- jstimezonedetect script start -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.6/jstz.min.js" ></script>
+  <script>
+  //This code is for the datetime range form
+  jQuery( "#dateTimeRange" ).submit(function( event ) {
+      timezone = jstz.determine();
+      jQuery(".timezone").val(timezone.name());
+  });
+  </script>
+  <!-- jstimezonedetect script end -->
+
+  <!-- Datetimepicker files Range Select start -->
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.17/jquery.datetimepicker.min.css"/ >
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.17/jquery.datetimepicker.full.min.js"></script>
+  <script>
+    jQuery('#datetimepicker1').datetimepicker(
+      {
+        format:'Y-m-d H:i',
+        defaultDate:'{{iniDate}}'
+      });
+    jQuery('#datetimepicker2').datetimepicker({
+        format:'Y-m-d H:i',
+        defaultDate:'{{endDate}}'
+      });
+
+      jQuery("#range_select input[type=radio]").click(function(){ 
+        timezone = jstz.determine();
+        jQuery(".timezone").val(timezone.name());
+        jQuery("#range_select").submit();
+      });
+  </script>
+  <!-- Datetimepicker / Range Select files end -->
+
+
+  <!-- Google Charts JS start -->
+  <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart']}]}"></script>
+
+  <script>
+    google.load('visualization', '1', {packages: ['corechart']});
+    google.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('datetime', 'Time');  
+      data.addColumn('number', 'Temp');      
+      data.addColumn('number', 'Hum');      
+      data.addRows([
+          {% for row in LABDATA %} 
+            [new Date({{row[0][0:4]}},{{row[0][5:7]}},{{row[0][8:10]}},{{row[0][11:13]}},{{row[0][14:16]}}),
+                {{'%0.2f'|format(row[1])}}, {{'%0.2f'|format(row[2])}}],
+          {% endfor %}
+        ]);
+
+      var options = {
+        width: 900,
+        height: 500,
+        hAxis: { title: "Date", format: 'dd hh:mm' },
+	series:{0: {targetAxisIndex: 0}, 1: {type:'bars', targetAxisIndex: 1}},
+	vAxes: {0: {title: 'Temps (Celsius)'}, 1: {title: 'Hum (%)'}},
+        title: 'Temp/Hum',
+        curveType: 'function'  //Makes line curved
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart_temps'));
+
+      chart.draw(data, options);
+
+    }
+  </script>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+  <head>
+    <!-- File saved as ISO-8859-1 encoding. -->
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>RBP INFO WEATHER STATION</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS Framework -->
+    <link rel="stylesheet" href="/static/weather/css/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="/static/weather/css/print.css" type="text/css" media="print">
+
+    <link href="http://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet" type="text/css">
+    <!--[if lt IE 8]><link rel="stylesheet" href="/static/weather/css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+
+    <link rel="stylesheet" href="/static/weather/css/normalize.css">
+    <link rel="stylesheet" href="/static/weather/css/semantic.css" type="text/css" media="screen, projection">
+
+    <!-- Number of columns: 24
+         Column width: 34
+         Gutter width: 8
+         Total width: 1000
+         Row height: 18 px  -->
+
+  <script>
+	function changePage() {
+		var params = new URLSearchParams(location.search);
+		params.set('tipo', 'dourado');
+		window.location.search = params.toString();
+	}
+  	<!-- 
+    window.onload = function() { setTimeout (changePage, 55000); } 
+    -->
+  </script>
+  </head>
+  <body>
+    <div id="container">
+        <div class="span-24" style="height:185px;">
+	     <div id="BOXLETTER">
+            <h1 class='blue'>19:38&nbsp;{{sem}}</h1>
+         </div><!--  end BOXLETTER -->
+        </div>
+
+        <div class="span-24" style="height:185px;">
+            <div class="span-12">
+                <div id="BOXINFO1"> <h2 class='red'>21.2&#176C 55%</h2></div><!--  end BOXINFO -->
+            </div>
+            <div class="span-12 last">
+                <div id="BOXINFO2">
+                    <h3 class='orange'>19&#176C GYN</h3>
+                    <img src="img_5terre.jpg" alt="Cinque Terre" width="290" height="200">
+                </div><!--  end BOXINFO -->
+            </div><!--  end span-8 last -->
+        </div>    
+    </div><!--  end container -->
+  </body>
+</html>

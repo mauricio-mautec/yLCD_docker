@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <!-- File saved as ISO-8859-1 encoding. -->
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>RBP INFO WEATHER STATION</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS Framework -->
+    <link rel="stylesheet" href="/static/weather/css/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="/static/weather/css/print.css" type="text/css" media="print">
+
+    <link href="http://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet" type="text/css">
+    <!--[if lt IE 8]><link rel="stylesheet" href="/static/weather/css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+
+    <link rel="stylesheet" href="/static/weather/css/normalizeWeather.css">
+    <link rel="stylesheet" href="/static/weather/css/semanticWeather.css" type="text/css" media="screen, projection">
+
+    <!-- Number of columns: 24
+         Column width: 34
+         Gutter width: 8
+         Total width: 1000
+         Row height: 18 px  -->
+
+  <script>
+	function changePage() {
+		var params = new URLSearchParams(location.search);
+		params.set('tipo', 'weather');
+		window.location.search = params.toString();
+	}
+  	<!-- 
+    window.onload = function() { setTimeout (changePage, 25000); } 
+    -->
+  </script>
+  </head>
+  <body>
+    <div id="container">
+        <div class="span-24" style="height:185px;">
+	     <div id="BOXLETTER">
+            <h1 class='blue'>{{time}}&nbsp;{{sem}}</h1>
+         </div><!--  end BOXLETTER -->
+        </div>
+
+        <div class="span-24" style="height:185px;">
+            <div class="span-12">
+                <div id="BOXINFO1"> <h2 class='red'>{{'{0:0.1f}'.format(temp)}}&#176C {{'{0:0.1f}'.format(hum)}}%</h2></div><!--  end BOXINFO -->
+            </div>
+            <div class="span-12 last">
+                <div id="BOXINFO2">
+                    <h3 class='green'>{{'{0:0.1f}'.format(tempApa)}}&#176C {{'{0:0.1f}'.format(humApa)}}%</h3>
+                    <div class="span-10 last" align="center">
+                        <h4 class='yellow'>{moon}</h4>
+                        {% for image in images %}
+                        <img style='width:30px; height:30px;margin-left:auto; margin-right:auto;display:inline-block;' src='/static/weather/images/{{image}}.png' />
+                        {% endfor %}
+                    </div>
+                </div><!--  end BOXINFO -->
+            </div><!--  end span-8 last -->
+        </div>    
+    </div><!--  end container -->
+  </body>
+</html>

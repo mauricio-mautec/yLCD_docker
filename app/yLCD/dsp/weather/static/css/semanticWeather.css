@@ -1,0 +1,81 @@
+/* Semantic CSS applies Blueprint CSS positioning to your custom IDs.
+   File saved as ISO-8859-1 encoding. 
+
+   number of columns:24
+   column width:34
+   gutter width:8
+   total width:1000
+   row height:18 px 
+*/
+#container {
+    /* This is a Blueprint Container. Spans 24 columns. */
+    width:1000px;
+    margin:0 auto;
+    /* height is 30 rows */
+    height:594px;
+    overflow:hidden;
+/*    background:url(src/grid.png); */
+}
+/* Begin descendants of container */
+#BOXMAIN {
+    /* Spans 8 columns. */
+    float:left;
+    width:328px;
+    margin-right:0;
+    /* height is 5 rows */
+    height:90px; 
+    overflow:hidden;
+}
+
+#BOXINFO1 {
+    /* Spans 12 columns. */
+    float:left;
+    width:496px;
+    margin-right:8px;
+    overflow:hidden;
+}
+
+#BOXINFO2 {
+    /* Spans 8 columns. */
+    float:left;
+    width:496px;
+    margin-right:0px;
+    overflow:hidden;
+}
+
+#BOXLINE {
+    /* Spans 8 columns. */
+    float:left;
+    width:328px;
+    margin-right:0;
+    /* height is 6 rows */
+    height:72px;
+    overflow:hidden;
+}
+#BOXSPC {
+    /* Spans 8 columns. */
+    float:left;
+    width:328px;
+    margin-right:0;
+    /* height is 17 rows */
+    height:36px;
+    overflow:hidden;
+}
+#BOXHUGE {
+    /* Spans 16 columns. */
+    float:left;
+    width:656px;
+    margin-right:0;
+    height:576px;
+    overflow:hidden;
+}
+
+#BOXLETTER {
+    float:left;
+    width:984px;
+    margin-right:0;
+    height:185px;
+    overflow:hidden;
+}
+
+/* End descendants of container */

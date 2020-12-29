@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <!-- File saved as ISO-8859-1 encoding. -->
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>APARECIDA WEATHER STATION</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS Framework -->
+    <link rel="stylesheet" href="/static/weather/css/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="/static/weather/css/print.css" type="text/css" media="print">
+
+    <link href="http://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet" type="text/css">
+    <!--[if lt IE 8]><link rel="stylesheet" href="/static/weather/css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+
+    <link rel="stylesheet" href="/static/weather/css/normalizeCidade.css">
+    <link rel="stylesheet" href="/static/weather/css/semanticCidade.css" type="text/css" media="screen, projection">
+
+    <!-- Number of columns: 24
+         Column width: 34
+         Gutter width: 8
+         Total width: 1000
+         Row height: 18 px  -->
+
+    <!-- To remove div outlines, remove line below. -->
+    <!--style>div {outline:1px solid #000000;}</style-->
+  <script>
+	function changePage() {
+		var params = new URLSearchParams(location.search);
+		params.set('tipo', 'cidade');
+        params.set('codigo', '{{codigo}}')
+		window.location.search = params.toString();
+	}
+  	window.onload = function() { setTimeout (changePage, 90000); }
+  </script>
+  </head>
+  <body>
+    <div id="container">
+        <div class="span-24" style="height:90px">
+            <h1 class="yellow">{{cidade}}<h1>
+        </div>
+        <div class="span-24" style="height:90px">
+            <div class="span-8" style="height:90px">
+                <div id="BOXTEMP">
+	                <h3 class='green'>{{"{0:0.1f}".format(tempMin)}}&#176C</h3>
+                </div>
+            </div>
+            <div class="span-8" style="height:90px">
+                <div id="BOXTEMP">
+	                <h3 class='orange'>{{"{0:0.1f}".format(tempExt)}}&#176C</h3>
+                </div>
+            </div>
+            <div class="span-8 last" style="height:90px">
+                <div id="BOXTEMPF">
+	                <h3 class='red'>{{"{0:0.1f}".format(tempMax)}}&#176C</h3>
+                </div>
+            </div>
+        </div>
+        
+        <div class="span-24" style="height:130px">
+            <div class="span-8" style="height:130px">
+                <div id="BOXTEMP1">
+	                <h3 class='green'>{{weather}}</h3>
+                </div>
+            </div>
+            <div class="span-8" style="height:130px">
+                <div id="BOXTEMP1">
+	                <h3 class='orange'>feels</br>{{"{0:0.1f}".format(aparent)}}&#176C</h3>
+                </div>
+            </div>
+            <div class="span-8 last" style="height:130px">
+                <div id="BOXTEMP1F">
+	                <h3 class='red'>&#9728;&nbsp;{{"{0:0.0f}".format(uvIndex)}} uv</br>{{"{0:0.0f}".format(ozone)}} oz</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="span-24" style="height:200px">
+            <div class="span-8" style="height:200px">
+                <div id="BOXTEMP2">
+	                <h4 class='blue'>{{direction}}&#8251;</br>{{"{0:0.0f}".format(windSpeed)}} &#13214;/h</br>{{visibility}} &#13214;</h4>
+                </div>
+            </div>
+            <div class="span-8" style="height:200px">
+                <div id="BOXTEMP2">
+	                <h4 class='blue'>{{"{0:0.1f}".format(humExt)}}%&nbsp;h<sub>2</sub>o {{"{0:0.0f}".format(pressure)}} hPa </h4>
+                </div>
+            </div>
+            <div class="span-8 last" style="height:200px">
+                <div id="BOXTEMP2F">
+	                <h3 class='blue'>&#x2614; {{precipProbability}}% {{"{0:0.1f}".format(dewPoint)}}&#176C dw</h3>
+                </div>
+            </div>
+        </div>
+        <div class="span-24" style="height:130px">
+            <h3 class='yellow'>Day {{sunrise}} - {{sunset}} Night</h3>
+        </div>
+
+    </div><!--  end container -->
+  </body>
+</html>

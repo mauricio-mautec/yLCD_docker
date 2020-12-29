@@ -1,0 +1,288 @@
+*** Starting uWSGI 2.0.19.1 (32bit) on [Thu Dec 24 16:20:20 2020] ***
+compiled with version: 8.3.0 on 24 December 2020 15:28:20
+os: Linux-5.4.79-v7+ #1373 SMP Mon Nov 23 13:22:33 GMT 2020
+nodename: fe79993e4da7
+machine: armv7l
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /app/uwsgi.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.1 (default, Dec 17 2020, 14:00:55)  [GCC 8.3.0]
+Set PythonHome to /app
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xebe928
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 64408 bytes (62 KB) for 1 cores
+*** Operational MODE: single process ***
+added /usr/local/bin/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0xebe928 pid: 21 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 21, cores: 1)
+*** Starting uWSGI 2.0.19.1 (32bit) on [Fri Dec 25 16:56:37 2020] ***
+compiled with version: 8.3.0 on 24 December 2020 15:28:20
+os: Linux-5.4.79-v7+ #1373 SMP Mon Nov 23 13:22:33 GMT 2020
+nodename: 3776952ebbbd
+machine: armv7l
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /app/uwsgi.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.1 (default, Dec 17 2020, 14:00:55)  [GCC 8.3.0]
+Set PythonHome to /app
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1cd2948
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 64408 bytes (62 KB) for 1 cores
+*** Operational MODE: single process ***
+added /usr/local/bin/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x1cd2948 pid: 9 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 9, cores: 1)
+*** Starting uWSGI 2.0.19.1 (32bit) on [Fri Dec 25 17:10:50 2020] ***
+compiled with version: 8.3.0 on 24 December 2020 15:28:20
+os: Linux-5.4.79-v7+ #1373 SMP Mon Nov 23 13:22:33 GMT 2020
+nodename: 02070af22c6d
+machine: armv7l
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /app/uwsgi.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.1 (default, Dec 17 2020, 14:00:55)  [GCC 8.3.0]
+Set PythonHome to /app
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xf9a948
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 64408 bytes (62 KB) for 1 cores
+*** Operational MODE: single process ***
+added /usr/local/bin/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xf9a948 pid: 8 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 8, cores: 1)
+*** Starting uWSGI 2.0.19.1 (32bit) on [Fri Dec 25 17:12:02 2020] ***
+compiled with version: 8.3.0 on 24 December 2020 15:28:20
+os: Linux-5.4.79-v7+ #1373 SMP Mon Nov 23 13:22:33 GMT 2020
+nodename: b42eda6d675c
+machine: armv7l
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /app/uwsgi.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.1 (default, Dec 17 2020, 14:00:55)  [GCC 8.3.0]
+Set PythonHome to /app
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x23798f0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 64408 bytes (62 KB) for 1 cores
+*** Operational MODE: single process ***
+added /usr/local/bin/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x23798f0 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 1, cores: 1)
+*** Starting uWSGI 2.0.19.1 (32bit) on [Fri Dec 25 17:13:14 2020] ***
+compiled with version: 8.3.0 on 24 December 2020 15:28:20
+os: Linux-5.4.79-v7+ #1373 SMP Mon Nov 23 13:22:33 GMT 2020
+nodename: 94d0735d5e2c
+machine: armv7l
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /app/uwsgi.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.1 (default, Dec 17 2020, 14:00:55)  [GCC 8.3.0]
+Set PythonHome to /app
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x25758f0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 64408 bytes (62 KB) for 1 cores
+*** Operational MODE: single process ***
+added /usr/local/bin/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x25758f0 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 1, cores: 1)
+*** Starting uWSGI 2.0.19.1 (32bit) on [Fri Dec 25 17:43:37 2020] ***
+compiled with version: 8.3.0 on 25 December 2020 17:21:20
+os: Linux-5.4.79-v7+ #1373 SMP Mon Nov 23 13:22:33 GMT 2020
+nodename: 50d13c22b715
+machine: armv7l
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /app/uwsgi.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.1 (default, Dec 17 2020, 14:00:55)  [GCC 8.3.0]
+Set PythonHome to /app
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1d658f0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 64408 bytes (62 KB) for 1 cores
+*** Operational MODE: single process ***
+added /usr/local/bin/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x1d658f0 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 1, cores: 1)
+*** Starting uWSGI 2.0.19.1 (32bit) on [Fri Dec 25 19:53:13 2020] ***
+compiled with version: 8.3.0 on 25 December 2020 17:21:20
+os: Linux-5.4.79-v7+ #1373 SMP Mon Nov 23 13:22:33 GMT 2020
+nodename: fd4f317fb3de
+machine: armv7l
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /app/uwsgi.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.1 (default, Dec 17 2020, 14:00:55)  [GCC 8.3.0]
+Set PythonHome to /app
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x21148f0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 64408 bytes (62 KB) for 1 cores
+*** Operational MODE: single process ***
+added /usr/local/bin/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x21148f0 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 1, cores: 1)
+*** Starting uWSGI 2.0.19.1 (32bit) on [Fri Dec 25 19:53:44 2020] ***
+compiled with version: 8.3.0 on 25 December 2020 17:21:20
+os: Linux-5.4.79-v7+ #1373 SMP Mon Nov 23 13:22:33 GMT 2020
+nodename: 85eb5721cc34
+machine: armv7l
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /app/uwsgi.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.1 (default, Dec 17 2020, 14:00:55)  [GCC 8.3.0]
+Set PythonHome to /app
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x22178f0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 64408 bytes (62 KB) for 1 cores
+*** Operational MODE: single process ***
+added /usr/local/bin/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x22178f0 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 1, cores: 1)

@@ -1,0 +1,4 @@
+*/1  * * * * /usr/bin/python /app/yLCD/collectSensorData.py
+*/5  * * * * /usr/bin/python /app/yLCD/collectWeatherData.py openweathermap.org
+*/7  * * * * /usr/bin/python /app/yLCD/collectWeatherData.py darksky.net
+*/11 * * * * /usr/bin/python /app/yLCD/collectWeatherData.py yr.no
